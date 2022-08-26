@@ -1,0 +1,112 @@
+﻿
+@{
+    ViewBag.Title = "Portafolio";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Libraries Stylesheet -->
+    <link href="~/Scripts/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="~/Scripts/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="~/Scripts/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+   
+        
+
+    <!-- Template Stylesheet -->
+    <link href="~/Content/Style.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+
+<!--Header-->
+<header class="bg-dark py-5 ImagenSolid">
+    <div class="container px-4 px-lg-5 ">
+        <div class="text-center text-white ">
+            <h1 class="display-5 fw-bolder label-container">PORTAFOLIO</h1>
+        </div>
+    </div>
+</header>
+
+<!-- Portafolio Start -->
+<div class="container-xxl py-6 pt-4 " id="project">
+    <div class="container-fluid row g-4 wow fadeInUp " data-wow-delay="0.2s" id="contenedor_portafolio">
+
+        <div class="portfolio-container  ">
+
+            <!-- Aqui estan las imagenes del portafolio -->
+
+
+
+        </div>
+    </div>
+</div>
+<!-- Porfafolio End -->
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/Scripts/lib/wow/wow.min.js"></script>
+<script src="~/Scripts/lib/easing/easing.min.js"></script>
+<script src="~/Scripts/lib/waypoints/waypoints.min.js"></script>
+<script src="~/Scripts/lib/counterup/counterup.min.js"></script>
+<script src="~/Scripts/lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="~/Scripts/lib/isotope/isotope.pkgd.min.js"></script>
+<script src="~/Scripts/lib/lightbox/js/lightbox.min.js"></script>
+
+<!-- Template Javascript -->
+<script src="~/Scripts/MainWow.js"></script>
+
+
+
+
+@section scripts {
+
+    <script>
+
+        $(document).ready(function () {
+           
+            MostrarPortafolio();
+
+
+        })      
+
+        function MostrarPortafolio() {
+
+            jQuery.ajax({
+                url: "@Url.Action("ListaPortafolio", "Home")",
+                type: "POST",                
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (response) {
+
+                    $("#contenedor_portafolio").html("");                   
+                
+                    $.each(response.data, function (i, element) {
+
+                        $("<div>").addClass("col-lg-3 col-md-6 portfolio-item first").append(
+                            $("<div>").addClass("portfolio-img rounded overflow-hidden").append(
+                                $("<img>").addClass("img-fluid card-portafolio").attr({ "src": "data:image/" + element.Extension + ";base64," + element.Base64 }),
+                                $("<div>").addClass("portfolio-btn").append(
+                                    $("<a>").addClass("btn btn-lg-square btn-outline-secondary border-2 mx-1").attr({ "data-lightbox": "portfolio", "href": "data:image/" + element.Extension + ";base64," + element.Base64 }).append(
+                                        $("<i>").addClass("fa fa-eye")
+                                    )                                   
+                                )
+                            ),
+                        ).appendTo("#contenedor_portafolio")
+
+                    })
+                },
+                beforeSend: function () {
+
+
+
+                }
+
+            })
+
+        }                  
+
+    </script>
+}

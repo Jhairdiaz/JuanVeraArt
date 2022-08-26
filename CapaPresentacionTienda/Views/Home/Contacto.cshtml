@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewBag.Title = "Contacto";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Header-->
+<header class="bg-dark py-5 ImagenSolid">
+    <div class="container px-4 px-lg-5 ">
+        <div class="text-center text-white ">
+            <h1 class="display-5 fw-bolder label-container">CONTACTO</h1>
+
+        </div>
+    </div>
+</header>
+
+<!-- Section-->
+<section>
+    <div class="container-fluid px-5 my-5 ">
+
+        <div class="row my-4 p-4">
+            <!-- Info Contacto-->
+            <div class="col-sm-4">
+                <div class="row gx-2 row-cols-md-2 row-cols-xl-1">
+                    <h2 class="qodef-m-title">RESERVAR AHORA</h2>
+                   
+                    <div class="qodef-shortcode qodef-m  qodef-working-hours-list">
+                        <div class="qodef-working-hours-item qodef-e">
+                            <h6 class="qodef-e-day text-white" _msthash="8974654" _msttexthash="230269">LUNES - VIERNES: </h6>
+                            <div class="qodef-e-line"></div>
+                            <span class="qodef-e-time" _msthash="9271470" _msttexthash="80132">9AM &gt; 9PM</span>
+                        </div>
+                        <div class="qodef-working-hours-item qodef-e">
+                            <h6 class="qodef-e-day  text-white" _msthash="8974862" _msttexthash="86645">SABADO: </h6>
+                            <div class="qodef-e-line"></div>
+                            <span class="qodef-e-time" _msthash="9271704" _msttexthash="79274">9AM &gt; 3PM</span>
+                        </div>
+                        <div class="qodef-working-hours-item qodef-e">
+                            <h6 class="qodef-e-day  text-white" _msthash="8975070" _msttexthash="94692">DOMINGO: </h6>
+                            <div class="qodef-e-line"></div>
+                            <span class="qodef-e-time" _msthash="9271938" _msttexthash="95901">CERRADO</span>
+                        </div>
+                        <div class="direccion row text-white font-roboto">
+                            <a href="https://goo.gl/maps/oTFtF7e7DFadwTdT7" target="_blank">
+                            CRA 91B # 47B-31 PRIMER PISO <br />BARRIO SANTA LUCIA</a>
+
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+
+
+            <!--Contacto-->
+            <div class="col-8">
+                
+                <form class="form_contacto" action="https://formspree.io/f/moqbvngl" method="POST">
+                    <div class="form_container">
+                        <input type="text" class="form_input m-2 p-2 text-white" placeholder="Nombre" autocomplete="off" name="name" />
+                        <input type="email"  class="form_input m-2 p-2" placeholder="Email" autocomplete="off" name="email" />
+                        <textarea style="height:150px" class="form_input  form_input_message m-2 p-2"  placeholder="Mensaje" name="message"></textarea>
+
+                        <input type="submit"  value="Enviar" class="form_cta m-2 btn border-white" />
+                    </div>
+
+                </form>
+                
+
+            </div>
+
+        </div>
+
+    </div>
+</section>

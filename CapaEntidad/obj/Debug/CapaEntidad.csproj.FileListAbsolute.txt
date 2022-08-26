@@ -1,0 +1,12 @@
+C:\Users\User\source\repos\TiendaVirtual\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\User\source\repos\TiendaVirtual\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\User\source\repos\TiendaVirtual\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\TiendaVirtual\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\TiendaVirtual\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\User\source\repos\TiendaVirtual\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\User\Documents\Proyectos\TiendaVirtual\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\User\Documents\Proyectos\TiendaVirtual\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\User\Documents\Proyectos\TiendaVirtual\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\User\Documents\Proyectos\TiendaVirtual\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Proyectos\TiendaVirtual\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\User\Documents\Proyectos\TiendaVirtual\CapaEntidad\obj\Debug\CapaEntidad.pdb
